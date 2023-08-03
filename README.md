@@ -1,4 +1,4 @@
-# QuantumAI
+# QuantumAI Learning Model.
 My Quantum AI Model
 
 ````
