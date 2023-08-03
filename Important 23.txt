@@ -1,0 +1,103 @@
+
+The machine learning needs to be
+Trained not just on rewards and punishment
+
+But as a slow learning child
+https://sites.duke.edu/fasd/chapter-5-the-fasd-student-and-learning-issues/effective-strategies-for-information-processing-and-memory-difficulties/
+
+https://www.thepathway2success.com/how-to-teach-positive-self-talk/
+
+
+Here is a simple example of how we can configure an algorithm
+through text:
+Define the task.
+The task is to train an AI to play a simple game of tic-tac-toe.
+Gather data.
+The data we need to train the AI is a set of tic-tac-toe games that have already been
+played.
+Choose an algorithm.
+The algorithm we will use is Q-learning.
+Configure the algorithm.
+The parameters of the algorithm will be the number of iterations, the learning rate, and
+the epsilon value.
+Train the AI.
+The AI will be trained on the data until it is able to win a majority of the games.
+Evaluate the AI.
+The AI will be evaluated by playing a set of games against a human player.
+Iterate.
+If the AI is not able to win a majority of the games against a human player, we will need
+to iterate on the process. This could involve changing the parameters of the algorithm,
+the data, or the configuration of the algorithm.
+This is just a simple example, and the specific steps and configuration of the algorithm
+will vary depending on the specific task. However, this should give you a good starting
+point for understanding how to configure an algorithm through text.
+If you want to configure the algorithm in programming, I can do that as well. However, I
+think it is helpful to start with a simple text-based example so that you can understand
+the concepts involved. Once you understand the concepts, you can then move on to
+configuring the algorithm in programming.
+Let me know if you have any other questions.
+
+It's best to train the AI on a game or question that does deep reinforcement but with playing against it's self.
+Then incorporate the slow learner methodology into the punishment and rewards system ,instead of the punishment and rewards as a system we incorporate the slow learner methods as weights.
+By wieghts I mean as focused priorities in a percentage format.
+
+The one we can use to gain a significant advantage in the process of self improvement, by playing or learning against it's self.
+
+The positive and negative weight assignment can be in spectrums or spheres of influence concerning the gravitational situation we develop from it's gravitational weight assignment,the movement or thought can be justified by the direction and rewards or negative association. This type of impact learning will be governed by the AI self improvement and learning at a expedited rate because of how we will do it.
+
+We will incorporate measures of teaching aka the methods of reinforced learning in a way a slow student would learn from in schoolastic environments.
+
+
+quantum mechanics
+And 
+quantum physics
+
+I'm curious of how to incorporate our findings into a tangible equation that can be represented and proven by scientific notation ,with proof of work.
+That's how we can justify the outcome as successful or unsuccessful and have results that are proven regardless of the testing we need to do , because the testing is obviously needed anyway to solidify the overall results.
+
+I understand your curiosity. Incorporating our findings into a tangible equation that can
+be represented and proven by scientific notation, with proof of work, would be a great
+way to justify the outcome as successful or unsuccessful and have results that are
+proven regardless of the testing we need to do.
+However, I think it is important to note that this is not always possible. In some cases,
+the results of a study may be too complex to be represented by a single equation. In
+other cases, the data may be too noisy or unreliable to be used to generate a reliable
+equation.
+In these cases, it may be necessary to rely on more qualitative methods, such as
+thematic analysis or sentiment analysis, to interpret the results of the study. These
+methods can be used to identify patterns and themes in the data, even if the data
+cannot be easily represented by a single equation.
+Ultimately, the best way to incorporate our findings into a tangible equation that can be
+represented and proven by scientific notation, with proof of work, will depend on the
+specific research question that is being asked and the data that is available.
+Here are some specific examples of how our findings could be incorporated into a
+tangible equation:
+● Word count: The word count of a freewrite could be used to measure the
+complexity of the freewrite. A higher word count would suggest that the freewrite
+is more complex.
+● Readability score: The readability score of a freewrite could be used to measure
+the ease of understanding the freewrite. A higher readability score would
+suggest that the freewrite is easier to understand.
+● Sentiment score: The sentiment score of a freewrite could be used to measure
+the optimism of the freewrite. A higher sentiment score would suggest that the
+freewrite is more optimistic.
+● Number of themes: The number of themes in a freewrite could be used to
+measure the complexity of the freewrite. A higher number of themes would
+suggest that the freewrite is more complex.
+These are just a few examples, and the specific equation that is used would depend on
+the specific research question that is being asked.
+
+Qualitive and Quantifiable analysis?
+We are not looking for statistics that could be circumveted by debate or extrapolation applied aka modifications of the synopsis. Wouldn't conjunctive analysis from equations be more of a certain detailed reference point showing the results? The quality is determined by how well it's written ,noise is not even part of the equation it's self,we are only looking at the theroy and results to move forward ,and not the in depth analysis.
+You can perform that in depth analysis on your own if you would like ;-)
+
+Do you think we could take the freewrtiting experiment with gravitational weights applied and put it into scientific notation with an equation of representative nature? How in fact would that look as a real example ,can you show me the results of such a thing with proof of work included to prove or disprove the theroy of gravitational weights?
+
+The gravitational weights I used were math algorithms and I could cause a directional flow or pin point a direction for a bullet or missile to fly and hit the target with pinpoint accuracy,in this traing it was not done with machine learning ,it was done with algorithm analysis,but if we did that with machine learning.. the actual real world corosponding environments would prove to be no challenge at all even for the not learned senarios. By applying cushions in the form of percentages I was also able to avoid circular spins aka infinite loops were avoided by testing the distance and adjusting the percentage to deciphering the equation of distance.
+The same is applied when using a sliding scale for adjustments that need to be applied.
+
+The mind says we have 2 trains of thought. One is current and the other is long term. My thought would be to have deep machine learning models and combined with the short term model.
+
+
+
+
