@@ -1,0 +1,31 @@
+Ito ang Ekwasyong Artificial Intelligence na ginawa ko para sa pinasiglang pagkatuto ng makina. Martes, ika-3 ng Agosto 2023.
+
+wi = (wi0 / (1 + (dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ
+* Si + complexity_factor * (w_x * x_i + w_y * y_i + w_z * z_i + w_O * O_i + w_D * D_i +
+w_cx * (x_i - x_c) + w_cy * (y_i - y_c) + w_cz * (z_i - z_c)))
+
+By: rainmanp7.
+
+Ang bagong ekwasyon ay kasama ang kadagdagan ng salik ng kumplikasyon, na dinamikong inaayos ang mga bigat batay sa kumplikasyon ng problema. Ito ay nagpapahintulot sa proseso ng pag-aaral na maging mas nakatuon sa mga pinaka-relevanteng salik at mas mahusay na maghanap ng solusyon. Ang ekwasyon ay may mga sumusunod na parameter:
+
+● wi: Ang na-update na bigat o halaga ng bagay na i pagkatapos isama ang lahat ng mga salik.
+● wi0: Ang unang bigat o halaga ng bagay na i bago isaalang-alang ang anumang salik. Ito ay nagsisilbing batayang punto o simula.
+● dij: Ang distansya sa pagitan ng bagay na i at ibang bagay na j sa kapaligiran.
+● τ: Isang parameter na nagkokontrol sa lakas ng epekto ng distansya sa pag-update ng bigat. Ang mas malalaking halaga ay gumagawa ng mas mahinang epekto ng distansya, at ang mas maliit na halaga ay gumagawa ng mas malakas na epekto.
+● Ps: Ang epektibidad ng positibong pag-uusap sa sarili para sa kasalukuyang estado i. Ito ay nakaaapekto kung paano naaapektuhan ng positibong pag-uusap sa sarili ang pag-update ng bigat para sa bagay na i.
+● T: Ang linear na bahagi ng timeline na nagpapakita ng pag-unlad ng pag-aaral para sa kasalukuyang estado i. Ito ay sumusukat sa pag-unlad ng pag-aaral ng bagay na i sa paglipas ng panahon.
+● α, β, γ, δ, ε, ζ, η, θ: Mga parameter na nagkokontrol sa impluwensya ng iba't ibang aspeto sa pag-update ng bigat. Kasama sa mga salik na ito ang:
+  - α: Kontrola ang epekto ng positibong pag-uusap sa sarili (Ps) sa pag-update ng bigat.
+  - β: Kontrola ang epekto ng timeline component (T) sa pag-update ng bigat.
+  - γ: Kontrola ang epekto ng epektibong mnemonics (M) sa pag-update ng bigat.
+  - δ: Kontrola ang epekto ng pakikilahok ng mga visual cues (V) sa pag-update ng bigat.
+  - ε: Kontrola ang epekto ng pagsama ng multi-sensory approach (MA) sa pag-update ng bigat.
+  - ζ: Kontrola ang epekto ng pagpapanatili ng mga kongkretong konsepto (C) sa pag-update ng bigat.
+  - η: Kontrola ang epekto ng paggamit ng mas pamilyar na pagkakatulad (S) upang makamit ang layunin sa pag-update ng bigat.
+  - θ: Kontrola ang epekto ng mga halimbawang solusyon na ibinigay (Si) para sa kasalukuyang estado i sa pag-update ng bigat.
+● complexity_factor: Isang salik na kumakatawan sa kumplikasyon ng problema. Ito ay tumutukoy sa impluwensya ng mga bigat sa proseso ng pag-aaral batay sa kumplikasyon ng problema. Ang mas mataas na kumplikasyon ay nagpapakita ng mas kumplikadong mga problema at magiging sanhi ng mas malalaking pag-aayos ng bigat.
+● w_x, w_y, w_z, w_O, w_D, w_cx, w_cy, w_cz: Mga bigat na nagkokontrol sa impluwensya ng mga x, y, at z kordinado ng mga bagay (x_i, y_i, z_i), ang orientasyon (O_i), at ang layo ng mga bagay (D_i) sa proseso ng pag-aaral. Ang mga bigat na ito ay awtomatikong inaayos batay sa complexity_factor, na nagpapahintulot sa proseso ng pag-aaral na baguhin ang focus nito batay sa kumplikasyon ng problema.
+● x_i, y_i, z_i: Ang mga x, y, at z kordinado ng bagay na i, na kumakatawan sa kanyang posisyon sa 3D na espasyo.
+● O_i: Ang orientasyon ng bagay na i, na nagpapakita ng aspeto nito na may kinalaman sa sarili.
+● D_i: Ang layo ng bagay na i mula sa kasalukuyang posisyon ng proseso ng pag-aaral, na kumakatawan sa layo nito mula sa gitnang posisyon.
+● x_c, y_c, z_c: Ang mga x, y, at z kordinado ng gitnang posisyon. Ito ang nagpapakita ng pangunahing layunin o gitnang punto na sinusubukan ng proseso ng pag-aaral na makamit.
