@@ -35,7 +35,7 @@ Rainmanp7 量子人工智慧強化學習模型
 Rainmanp7 量子人工知能
 ````
 ````
-test area
+Inteligencia Artificial Cuántica de Rainmanp7
 ````
 ````
 test area
