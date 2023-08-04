@@ -38,7 +38,7 @@ Rainmanp7 量子人工知能
 Inteligencia Artificial Cuántica de Rainmanp7
 ````
 ````
-रेनमैनपी7 क्वांटम आर्टिफिशियल इंटेलिजेंस
+test1
 ````
 ````
 
