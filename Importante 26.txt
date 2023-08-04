@@ -1,0 +1,33 @@
+
+Esta es la ecuación de inteligencia artificial que he creado para el aprendizaje reforzado de máquinas. Martes, 3 de agosto de 2023.
+
+wi = (wi0 / (1 + (dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ
+* Si + factor_de_complejidad * (w_x * x_i + w_y * y_i + w_z * z_i + w_O * O_i + w_D * D_i +
+w_cx * (x_i - x_c) + w_cy * (y_i - y_c) + w_cz * (z_i - z_c)))
+
+Por: rainmanp7.
+
+La nueva ecuación incorpora el factor de complejidad, que ajusta dinámicamente los pesos basándose en la complejidad del problema. Esto permite que el proceso de aprendizaje se centre en los factores más relevantes y explore el espacio de soluciones de manera más efectiva.
+
+La ecuación tiene los siguientes parámetros:
+● wi: El peso o valor actualizado del objeto i después de incorporar todos los factores.
+● wi0: El peso o valor inicial del objeto i antes de considerar cualquier factor. Actúa como referencia o punto de partida.
+● dij: La distancia entre el objeto i y otro objeto j en el entorno.
+● τ: Un parámetro que controla la fuerza del efecto de distancia en la actualización de pesos. Valores más grandes hacen que el efecto de distancia sea más débil, y valores más pequeños lo hacen más fuerte.
+● Ps: La eficacia del diálogo positivo interno para el estado actual i. Influye en cómo el diálogo positivo interno afecta la actualización de pesos del objeto i.
+● T: El componente de línea de tiempo lineal que representa la progresión del aprendizaje para el estado actual i. Tiene en cuenta el progreso de aprendizaje del objeto i con el tiempo.
+● α, β, γ, δ, ε, ζ, η, θ: Parámetros que controlan la influencia de diferentes aspectos en la actualización de pesos. Estos factores incluyen:
+○ α: Controla el impacto del diálogo positivo interno (Ps) en la actualización de pesos.
+○ β: Controla el impacto del componente de línea de tiempo (T) en la actualización de pesos.
+○ γ: Controla el impacto de la efectividad de las mnemotecnicas (M) en la actualización de pesos.
+○ δ: Controla el impacto de la participación de señales visuales (V) en la actualización de pesos.
+○ ε: Controla el impacto de la incorporación de enfoque multisensorial (MA) en la actualización de pesos.
+○ ζ: Controla el impacto de mantener conceptos concretos (C) en la actualización de pesos.
+○ η: Controla el impacto de utilizar similitudes más familiares (S) para lograr el objetivo en la actualización de pesos.
+○ θ: Controla el impacto de las soluciones de ejemplo proporcionadas (Si) para el estado actual i en la actualización de pesos.
+● factor_de_complejidad: Un factor que representa la complejidad del problema. Escala la influencia de los pesos en el proceso de aprendizaje basado en la complejidad del problema. Factores de complejidad más altos indican problemas más complejos y conducirán a ajustes de pesos más significativos.
+● w_x, w_y, w_z, w_O, w_D, w_cx, w_cy, w_cz: Pesos que controlan la influencia de las coordenadas x, y, y z de los objetos (x_i, y_i, z_i), la orientación (O_i) y la distancia exterior (D_i) en el proceso de aprendizaje. Estos pesos se ajustan automáticamente en función del factor_de_complejidad, lo que permite que el proceso de aprendizaje adapte su enfoque según la complejidad del problema.
+● x_i, y_i, z_i: Las coordenadas x, y y z del objeto i, que representan su posición en el espacio tridimensional.
+● O_i: La orientación del objeto i, que indica su aspecto centrado en sí mismo.
+● D_i: La distancia exterior del objeto i desde la posición actual del proceso de aprendizaje, que representa su distancia desde la posición central.
+● x_c, y_c, z_c: Las coordenadas x, y y z de la posición central. Esto representa el objetivo principal o el punto central que el proceso de aprendizaje tiene como objetivo lograr.
