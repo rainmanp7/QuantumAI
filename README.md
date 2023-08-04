@@ -1,5 +1,5 @@
 # QuantumAI Learning Model.
-My Quantum AI Model
+Rainmanp7 Quantum Artificial Intelligence reinforced learning Model
 
 ````
 My Scattered research work of creating
@@ -13,3 +13,7 @@ just remember my name: rainmanp7
 maybe you will use my work and create something amazing.
 this work was done many years ago but it's now Online
 from I would have to guess 19 years ago originally.
+
+Notes:
+Rainmanp7 Quantum Artificial Intelligence pinasiglang pagkatuto ng Modelo
+Rainmanp7 量子人工智慧強化學習模型
