@@ -16,7 +16,7 @@ from I would have to guess 19 years ago originally dealing with
 math matic formulas from another project. I put that together
 with Artificial intelligence Reinforcement learning and formulated
 a new species,capable of learning in different spectrums of thought.
-"Synaptic Learning"
+"Enahanced Neural Synaptic Learning"
 
 Notes:
 ````
