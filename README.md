@@ -12,7 +12,10 @@ that I could help make smarter and self learning.
 just remember my name: rainmanp7
 maybe you will use my work and create something amazing.
 this work was done many years ago but it's now Online
-from I would have to guess 19 years ago originally.
+from I would have to guess 19 years ago originally dealing with
+math matic formulas from another project. I put that together
+with Artificial intelligence Reinforcement learning and formulated
+a new species,capable of learning in different spectrums of thought.
 
 Notes:
 ````
