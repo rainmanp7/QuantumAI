@@ -1,0 +1,35 @@
+9:20am Saturday August 5th 2023
+*Vectorize the Math
+Let's improve the equation to incorporate the leveraging vectorized math and matrices so that it will will accelerate the linear algebra. Without changing it's operational functionality of how it currently works.
+
+Equation: 
+
+wi = (wi0 / (1 + (dij(T1,T2,...TN) / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (w_x * x_i + w_y * y_i + w_z * z_i + w_O * O_i + w_D * D_i + w_cx * (x_i - x_c) + w_cy * (y_i - y_c) + w_cz * (z_i - z_c))) 
+
+
+Here is one way we could leverage vectorized math and matrices to accelerate the linear algebra operations in the reinforced learning equation, without changing its core functionality:
+
+Updated Equation:
+
+wi = (wi0 / (1 + (vector_dij(T1,T2,...TN) / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (matrix_multiply(Wx, vector_Xi) + matrix_multiply(Wy, vector_Yi) + matrix_multiply(Wz, vector_Zi) + matrix_multiply(WO, vector_Oi) + matrix_multiply(WD, vector_Di) + matrix_multiply(Wcx, vector_Xic) + matrix_multiply(Wcy, vector_Yic) + matrix_multiply(Wcz, vector_Zic))
+
+Where:
+
+- vector_dij(T1,T2,...TN) computes dij in batches using vectorization.
+
+- matrix_multiply() utilizes optimized libraries for matrix operations.
+
+- Vectors used for positions, distances, orientations, etc. 
+
+- Matrices used for weights Wx, Wy etc.
+
+This keeps the same structure, but uses vectors and matrices to optimize the performance of the underlying linear algebra without altering the core logic.
+
+Key Optimizations:
+
+- Leverage SIMD instructions and parallelism in vector_dij().
+
+- Use highly optimized BLAS libraries for matrix_multiply(). 
+
+- Batch computations into efficient vector/matrix operations.
+

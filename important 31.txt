@@ -1,0 +1,31 @@
+1:30pm Saturday August 5th 2023
+*Multithreaded 
+Here is how I would update the reinforced learning equation to incorporate multi-threaded distance calculations dij:
+
+Updated Equation:
+
+wi = (wi0 / (1 + (dij(T1,T2,...TN) / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (w_x * x_i + w_y * y_i + w_z * z_i + w_O * O_i + w_D * D_i + w_cx * (x_i - x_c) + w_cy * (y_i - y_c) + w_cz * (z_i - z_c)))
+
+Where: 
+
+dij(T1,T2,...TN) represents distributing distance calculations across N threads:
+
+- Maintain a pool of threads T1, T2, ..., TN to handle dij computation
+
+- When dij is needed between objects i and j, dispatch to next available thread Tk
+
+- Tk computes dij between i and j asynchronously 
+
+- Once finished, Tk returns result to aggregate distances
+
+This allows parallel, concurrent computation of dij across multiple threads.
+
+The rest of the equation remains unchanged. The threads operate transparently on dij without disrupting the overall structure.
+
+Key Implementation Details:
+
+- Thread pool size N determines parallelism level
+- Efficient work distribution algorithm to threads
+- Shared memory access handled via mutexes 
+- Load balancing through dynamic thread pooling
+
