@@ -1,0 +1,31 @@
+Latina:
+
+Die Saturni hora vigesima mensis Augusti anni bismillesimi vigesimi tertii
+
+rainmanp7 in repositorio GitHub
+
+*Vectores Mathematicae ipsos ordinavit in Pipeline
+
+Ut incredibilem accuratianem obtineat
+
+Aequationem praesentem mutet ut multiplicationes matricum et computationes vectoriales in Pipeline disponat, servata interim structura universa integra:
+
+Aequatio Modificata:
+
+wi = (wi0 / (1 + (vector_dij(T1,T2,...TN) | pipeline | / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (pipeline(matrix_multiply(Wx, vector_Xi), matrix_multiply(Wy, vector_Yi), matrix_multiply(Wz, vector_Zi), matrix_multiply(WO, vector_Oi), matrix_multiply(WD, vector_Di), matrix_multiply(Wcx, vector_Xic), matrix_multiply(Wcy, vector_Yic), matrix_multiply(Wcz, vector_Zic)) | pipeline | + pipeline(vector_calculations(vector_dij, vector_Xi, vector_Yi, ...) )
+
+Ubi:
+
+- pipeline() indicat computationes concurrentes et inter se imbricatas.
+
+- vector_calculations() vectores operationes in Pipeline disponit.
+
+Sic multiplicationes matricum et computationes vectoriales per temporis lapsum inter se concurrent, servata aequationis structura.
+
+Res Maxime Notandae:
+
+- Operationes in Pipeline accurate coordinentur ad parallelismum maximizandum.
+
+- Pro smootho fluxu, gradus et buffers addantur pro necessitate.
+
+- Cave ne ullae dependentiae vel ordinationes inter partes Pipeline adsint.
