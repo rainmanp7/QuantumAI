@@ -1,0 +1,25 @@
+2023年8月5日星期六晚上8:40
+在GitHub上的rainmanp7儲存庫。
+*將向量數學進行流水線處理。
+為了獲得令人難以置信的準確性。
+修改當前方程式，將矩陣乘法和向量化計算部分進行流水線處理，同時保持整體結構完整：
+
+更新後的方程式：
+
+wi = (wi0 / (1 + (vector_dij(T1,T2,...TN) | pipeline | / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (pipeline(matrix_multiply(Wx, vector_Xi), matrix_multiply(Wy, vector_Yi), matrix_multiply(Wz, vector_Zi), matrix_multiply(WO, vector_Oi), matrix_multiply(WD, vector_Di), matrix_multiply(Wcx, vector_Xic), matrix_multiply(Wcy, vector_Yic), matrix_multiply(Wcz, vector_Zic)) | pipeline | + pipeline(vector_calculations(vector_dij, vector_Xi, vector_Yi, ...) ) 
+
+其中：
+
+- pipeline() 表示計算以重疊的流水線方式運行。
+
+- vector_calculations() 將一系列向量運算進行流水線處理。
+
+通過重疊執行，這將使矩陣乘法和向量計算進行流水線處理，同時保持相同的方程式結構。
+
+關鍵細節：
+
+- 在流水線中仔細安排操作，以最大限度地實現並行處理。
+
+- 根據需要添加階段和緩衝區以平滑流水線處理。
+
+- 確保流水線段之間沒有依賴關係或順序限制。
