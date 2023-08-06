@@ -1,0 +1,25 @@
+2023년 8월 5일 토요일 오후 8시 40분
+GitHub의 rainmanp7 레포지토리.
+*벡터화된 수학을 파이프라인으로 처리했습니다.
+놀랄만한 정확도를 얻기 위해.
+현재 방정식을 수정하여 행렬 곱셈과 벡터화된 계산 섹션을 파이프라인으로 처리하되, 전체 구조를 유지합니다:
+
+업데이트된 방정식:
+
+wi = (wi0 / (1 + (vector_dij(T1, T2, ...TN) | 파이프라인 | / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + 복잡성_팩터 * (파이프라인(matrix_multiply(Wx, vector_Xi), matrix_multiply(Wy, vector_Yi), matrix_multiply(Wz, vector_Zi), matrix_multiply(WO, vector_Oi), matrix_multiply(WD, vector_Di), matrix_multiply(Wcx, vector_Xic), matrix_multiply(Wcy, vector_Yic), matrix_multiply(Wcz, vector_Zic)) | 파이프라인 | + 파이프라인(vector_calculations(vector_dij, vector_Xi, vector_Yi, ...) ) 
+
+여기서:
+
+- 파이프라인()은 겹치는 파이프라인 형식으로 실행되는 계산을 나타냅니다.
+
+- vector_calculations()은 벡터 연산의 일련의 과정을 파이프라인으로 처리합니다.
+
+이 방식으로 행렬 곱셈과 벡터 계산을 겹치는 실행으로 파이프라인 처리하면서 동일한 방정식 구조를 유지합니다.
+
+주요 사항:
+
+- 파이프라인 내에서 작업을 신중하게 일정화하여 병렬 처리를 극대화합니다.
+
+- 파이프라인 처리를 부드럽게 하기 위해 필요한 단계와 버퍼를 추가합니다.
+
+- 파이프라인 섹션 간에 의존성이나 순서 제약이 없도록 합니다.
