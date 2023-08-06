@@ -1,0 +1,25 @@
+8:40 ng gabi, Sabado, Agosto 5, 2023
+rainmanp7 repo sa GitHub.
+*Napagkasya ang Vectored Math.
+Upang makamit ang kahanga-hangang kahusayan.
+Baguhin ang kasalukuyang equation upang mapagkasunduan ang matrix multiplication at vectorized computation sections sa pamamagitan ng pagpipilian, habang iniingatan ang pangkalahatang istraktura:
+
+Na-Update na Equation:
+
+wi = (wi0 / (1 + (vector_dij(T1, T2, ...TN) | pipeline | / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (pipeline(matrix_multiply(Wx, vector_Xi), matrix_multiply(Wy, vector_Yi), matrix_multiply(Wz, vector_Zi), matrix_multiply(WO, vector_Oi), matrix_multiply(WD, vector_Di), matrix_multiply(Wcx, vector_Xic), matrix_multiply(Wcy, vector_Yic), matrix_multiply(Wcz, vector_Zic)) | pipeline | + pipeline(vector_calculations(vector_dij, vector_Xi, vector_Yi, ...) ) 
+
+Kung Saan:
+
+- Ang pipeline() ay nangangahulugang ang mga computation ay tumatakbo sa isang overlapping pipelined fashion.
+
+- Ang vector_calculations() ay nagpipipeline ng isang sunud-sunod na vector operations.
+
+Ito ay nagpipipeline ng matrix multiplications at vector computations sa pamamagitan ng overlapping execution, habang iniingatan ang parehong istraktura ng equation.
+
+Mahalagang Detalye:
+
+- Maingat na iskedyul ang mga operasyon sa pipeline upang maksimisahin ang parallelism.
+
+- Magdagdag ng mga yugto at buffers kung kinakailangan upang mapanatili ang pagpipilian.
+
+- Siguruhing walang mga dependency o ordering constraints sa pagitan ng mga pipelined na bahagi.
