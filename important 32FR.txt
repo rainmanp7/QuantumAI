@@ -1,0 +1,25 @@
+20h40 Samedi 5 août 2023
+Dépôt rainmanp7 sur GitHub.
+*Mise en pipeline des mathématiques vectorielles.
+Pour obtenir une précision incroyable.
+Modifier l'équation actuelle pour mettre en pipeline les sections de multiplication de matrices et de calculs vectorisés, tout en maintenant la structure générale intacte :
+
+Équation mise à jour :
+
+wi = (wi0 / (1 + (vector_dij(T1,T2,...TN) | pipeline | / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (pipeline(matrix_multiply(Wx, vector_Xi), matrix_multiply(Wy, vector_Yi), matrix_multiply(Wz, vector_Zi), matrix_multiply(WO, vector_Oi), matrix_multiply(WD, vector_Di), matrix_multiply(Wcx, vector_Xic), matrix_multiply(Wcy, vector_Yic), matrix_multiply(Wcz, vector_Zic)) | pipeline | + pipeline(vector_calculations(vector_dij, vector_Xi, vector_Yi, ...) ) 
+
+Où :
+
+- pipeline() indique des calculs effectués de manière superposée en mode pipeliné.
+
+- vector_calculations() met en pipeline une séquence d'opérations vectorielles.
+
+Cela met en pipeline les multiplications de matrices et les calculs vectoriels en chevauchant l'exécution, tout en maintenant la même structure d'équation.
+
+Détails clés :
+
+- Planifier soigneusement les opérations en pipeline pour maximiser le parallélisme.
+
+- Ajouter des étapes et des tampons au besoin pour lisser la mise en pipeline.
+
+- Veiller à ce qu'il n'y ait pas de dépendances ni de contraintes d'ordonnancement entre les sections en pipeline.
