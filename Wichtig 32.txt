@@ -1,0 +1,25 @@
+20:40 Uhr Samstag, 5. August 2023
+rainmanp7 Repository auf GitHub.
+*Die vektorisierte Mathematik wurde gepipelined.
+Um eine unglaubliche Genauigkeit zu erreichen.
+Ändern Sie die aktuelle Gleichung, um die Matrixmultiplikations- und vektorisierten Berechnungsabschnitte zu pipelinieren, während die Gesamtstruktur intakt bleibt:
+
+Aktualisierte Gleichung:
+
+wi = (wi0 / (1 + (vector_dij(T1,T2,...TN) | Pipeline | / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ* Si + φ * Td_i + complexity_factor * (Pipeline(matrix_multiply(Wx, vector_Xi), matrix_multiply(Wy, vector_Yi), matrix_multiply(Wz, vector_Zi), matrix_multiply(WO, vector_Oi), matrix_multiply(WD, vector_Di), matrix_multiply(Wcx, vector_Xic), matrix_multiply(Wcy, vector_Yic), matrix_multiply(Wcz, vector_Zic)) | Pipeline | + Pipeline(vector_calculations(vector_dij, vector_Xi, vector_Yi, ...) ) 
+
+Wo:
+
+- Pipeline() zeigt an, dass Berechnungen in einer überlappenden gepipelineten Weise ausgeführt werden.
+
+- vector_calculations() pipelinet eine Abfolge von Vektoroperationen.
+
+Durch Überlappung der Ausführung werden die Matrixmultiplikationen und Vektorberechnungen gepipelinet, während die gleiche Gleichungsstruktur beibehalten wird.
+
+Wichtige Details:
+
+- Planen Sie Operationen sorgfältig in der Pipeline, um den Parallelismus zu maximieren.
+
+- Fügen Sie je nach Bedarf Stufen und Puffer hinzu, um die Pipeline zu glätten.
+
+- Stellen Sie sicher, dass zwischen den pipelineten Abschnitten keine Abhängigkeiten oder Ordnungseinschränkungen bestehen.
