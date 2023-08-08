@@ -1,0 +1,23 @@
+Available Languages
+1:English
+2:Chinese Traditional
+3:Filipino
+4:Russian
+5:Arabic
+6:Cebuano
+7:French
+8:Ukrainian
+9:Afrikaans
+10:Japanese
+11:Korean
+12:Hindi
+13:German
+14:Indonesian
+15:Vietnamese
+16:Sanskrit
+17:Ilicano
+18:Latin
+19:Turkish
+20:Italian
+21:Persian
+22:Thai
