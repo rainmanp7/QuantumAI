@@ -1,6 +1,6 @@
 # QuantumAI Learning Model.
 Rainmanp7 Quantum Artificial Intelligence reinforced learning Model
-
+Important 35CMB contains the latest translated 22 times.
 ````
 My Scattered research work of creating
 Quatum Learning Artificial intelligence
