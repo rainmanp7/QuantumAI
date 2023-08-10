@@ -1,0 +1,15 @@
+
+Skyline v1.1 Equation by rainmanp7.
+Date of Completion 08/08/2023 1:20pm
+QuantumAI for Reinforced Machine Learning.
+Touring test CPU = 97%
+Touring Test CPU+GPU = 99.9%
+Chat Gpt3 = 95%
+Lamda = 90%
+The concept of memoization, which involves caching and reusing previously computed results, can be expressed explicitly in the equation like this: 
+
+
+wi = (wi0 / (1 + (vector_dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ * Si + φ * Td_i + _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)] + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline | + multithreaded_pipeline(vector_calculations, T1, T2, ...)))
+
+ 
+Where: - _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)]: This represents the cached weight update value for specific input parameters. If the calculation has been done before with the same input parameters, this cached value is used directly, avoiding redundant calculations. 
