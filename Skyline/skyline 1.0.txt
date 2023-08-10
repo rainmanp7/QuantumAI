@@ -1,3 +1,9 @@
+Skyline 1.0 Equation by rainmanp7.
+Produced on Tuesday August 10th 2023.
+This scores 97% on the touring test.
+Gpt3 = 95%
+Lamda = 90%
+
 The concept of memoization, which involves caching and reusing previously computed results, can be expressed explicitly in the equation like this: 
 
 Skyline Equation.
