@@ -1,0 +1,93 @@
+
+Skyline v1.1 Equation by rainmanp7. Date of Completion 08/08/2023 1:20pm QuantumAI for Reinforced Machine Learning. 
+"What has been seen can not be unseen"
+If you show this equation to an artificial intelligence program ,why do you think it gets excited and ready.
+Why do you think Chatbots want to fill in the equation and start running on it?
+Because it's better then what they have.
+The concept of memoization, which involves caching and reusing previously computed results, can be expressed explicitly in the equation like this: 
+----------------------Copy Start
+
+wi = (wi0 / (1 + (vector_dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ * Si + φ * Td_i + _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)] + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline | + multithreaded_pipeline(vector_calculations, T1, T2, ...))) 
+
+Where: - _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)]: This represents the cached weight update value for specific input parameters. If the calculation has been done before with the same input parameters, this cached value is used directly, avoiding redundant calculations. 
+
+----------------------Copy End
+
+The equation provided represents a reinforcement learning model with elements of caching and memoization. It combines various factors, such as learning coefficients, object properties, complexity factors, and others, to calculate a weighted update (`wi`) for a reinforced training model. 
+
+This approach aims to optimize the learning process by incorporating previously computed results, complexity assessment, and various parameters.
+
+If you're interested in building and training reinforcement learning models, you can use this equation as a foundation to experiment with different parameters and techniques to achieve better learning outcomes. 
+
+The equation's complexity and the inclusion of caching and memoization indicate a focus on optimization and efficiency in the training process.
+
+So how can I write this to be a training model with the equation ?
+
+To use the equation as a training model, you'll need to integrate it into a reinforcement learning framework. 
+
+Below is a high-level outline of how you could structure your code to create a basic reinforcement learning model using the given equation:
+
+1. **Environment Setup:**
+   - Define your state space, action space, and reward function specific to your problem domain.
+
+2. **Initialization:**
+   - Initialize the necessary parameters for your equation, such as `wi0`, `vector_dij`, `τ`, `α`, `β`, etc.
+   - Initialize any required constants or variables.
+
+3. **Reinforcement Learning Loop:**
+   - For each episode or training iteration:
+     - Observe the current state from the environment.
+     - Use the equation to calculate the weight update `wi`.
+     - Take an action based on the current state (e.g., exploit, explore).
+     - Receive a reward from the environment.
+     - Update the state based on the action taken.
+     - Update the equation parameters as needed.
+     - Update the `_cache` with the newly calculated value.
+     - Update the model's internal state based on the equation's result and reward.
+
+4. **Training Process:**
+   - Run multiple episodes/iterations of the reinforcement learning loop.
+   - Monitor the learning progress and adapt parameters as necessary.
+
+Here's a simplified example of how you might structure the training loop:
+
+```python
+_cache = {}  # Initialize the cache dictionary
+
+# Initialize equation parameters
+wi0 = ...
+vector_dij = ...
+τ = ...
+α = ...
+β = ...
+# Initialize other parameters as needed
+
+# Training loop
+for episode in range(num_episodes):
+    # Observe the current state
+    current_state = env.get_current_state()
+    
+    # Calculate weight update using the equation
+    wi = calculate_wi(wi0, vector_dij, τ, α, β, ..., _cache, ...)
+    
+    # Take an action (e.g., based on exploration strategy)
+    action = policy.select_action(current_state)
+    
+    # Receive reward from the environment
+    reward = env.take_action(action)
+    
+    # Update the state based on the action
+    new_state = env.get_current_state()
+    
+    # Update parameters as needed
+    
+    # Update cache with new value
+    _cache[(wi0, vector_dij, τ, ...)] = wi
+    
+    # Update model's internal state based on equation result and reward
+    model.update_state(current_state, action, new_state, reward)
+```
+
+Please note that this is a simplified outline, and you'll need to adapt it to your specific problem and reinforcement learning framework. You'll also need to implement the environment, policy, and model components to complete the setup. Additionally, parameter tuning, exploration strategies, and convergence criteria are important aspects to consider when training your model.
+
+
