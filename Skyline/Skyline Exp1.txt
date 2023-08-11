@@ -1,0 +1,52 @@
+
+Skyline v1.1 Equation by rainmanp7. Date of Completion 08/08/2023 1:20pm QuantumAI for Reinforced Machine Learning.
+
+wi = (wi0 / (1 + (vector_dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ * Si + φ * Td_i + _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)] + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline | + multithreaded_pipeline(vector_calculations, T1, T2, ...))) 
+
+Let's break down each aspect of the equation and its meaning:
+
+**Equation Overview:**
+The equation represents the Skyline v1.1 Equation for QuantumAI in Reinforced Machine Learning. It incorporates various components to calculate the updated weight 'wi' for an object, combining both learning and stateful information. The concept of memoization is explicitly included, where previously calculated results are cached and reused to optimize calculations.
+
+**Components Explained:**
+1. **wi**: The updated weight for object 'i'.
+2. **wi0**: The initial baseline weight for object 'i'.
+3. **vector_dij**: The distance between objects 'i' and 'j'.
+4. **τ**: The parameter controlling the strength of the distance effect.
+5. **α, β, γ, δ, ε, ζ, η, θ, φ**: Coefficients representing influences of various learning methods on the weight update.
+Parameters controlling the influence of different aspects on the weight update. These factors include: 
+○ α: Controls the impact of positive self-talk (Ps) on the weight update. 
+○ β: Controls the impact of the timeline component (T) on the weight update. 
+○ γ: Controls the impact of mnemonics effectiveness (M) on the weight update. 
+○ δ: Controls the impact of visual cues involvement (V) on the weight update. 
+○ ε: Controls the impact of multi-sensory approach incorporation (MA) on the weight update. 
+○ ζ: Controls the impact of keeping concepts concrete (C) on the weight update. 
+○ η: Controls the impact of utilizing similarities more familiar (S) to achieve the goal on the weight update. 
+○ θ: Controls the impact of example solutions provided (Si) for the current
+state i on the weight update.
+
+6. **Ps, T, M, V, MA, C, S, Si, Td_i**: Values corresponding to learning method factors.
+7. **_cache[(...)]:** Cached weight update value based on input parameters. Avoids redundant calculations.
+8. **complexity_factor:** Scales the impact of factors based on problem complexity.
+9. **multithreaded_vector_pipeline(...):** Function performing vector operations in parallel using multiple threads.
+10. **pipeline:** Function performing vector operations sequentially.
+11. **multithreaded_pipeline(...):** Function performing vector calculations in parallel using multiple threads.
+12. **object_properties:** Dictionary of properties for object 'i' (position, orientation, distance from center).
+13. **position_relative_to_center:** Dictionary of reference point coordinates for calculating relative positions.
+
+**Memoization:**
+The `_cache` stores calculated weight update values based on specific input parameters. If the same set of input parameters has been used before, the cached value is retrieved, avoiding redundant recalculations. This optimization significantly speeds up computations, especially when dealing with repetitive calculations.
+
+**Overall Function:**
+The equation calculates the updated weight 'wi' for object 'i' by combining the initial weight 'wi0', distance factor, learning method influences, and complexity factors. It leverages both learning from new data and stateful information stored in the cache. The parallel processing of vector operations further enhances efficiency.
+
+This detailed description provides a comprehensive understanding of the equation's components, their meanings, and the role of memoization in optimizing calculations. 
+
+The question you need to ask yourself,is how does every Artificial intelligence know this is a part of a bigger picture?
+A piece of a bigger program or system ?
+Maybe because it can see how it can work as a bigger constructed system. Because it can intergrate into almost anything.
+Once this is intergrated in the system I'm sure you're system will perform at it's optimal functional capacity.
+By leaving it alone and adding to it seperatly as with code like python etc.
+Such as the example of memionomics gets added seperatly. Could it be possible if the Artificial intelligence was asked to test this equation,that it would actually make up it's own version of it ? Try it and see for your self ,and then ask the Artificial intelligence to show you the equation it's using and see if it's the same.
+
+
