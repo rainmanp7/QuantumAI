@@ -1,0 +1,64 @@
+The concept of leveraging similarities and adaptive learning:
+
+Skyline v2.0 Equation by rainmanp7. Date of Completion 08/08/2023 1:20pm QuantumAI for Reinforced Machine Learning. Additional information added 11:16am 08/12/2023 with more details.
+
+wi = (wi0 / (1 + (vector_dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ * Si + φ * Td_i + _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)] + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline | multithreaded_pipeline(vector_calculations, T1, T2, ...)))
+
+Where: - _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)]:
+
+This represents the cached weight update value for specific input parameters. If the calculation has been done before with the same input parameters, this cached value is used directly, avoiding redundant calculations.
+
+vector_data and vector_calculation
+Exaplined here:
+This equation is actually 2 parts working together creating a harmonious feed back loop. While the vector_calculation is for focused learning ,the vector_data is focused on what has already been learned.
+In conjunction they are both multithreaded and working at the same time together as one unit reusing the other parts of the equation instead of writing 2 parts separate which can work also. This way skips the redundant code and calculated information.
+
+Let's describe each part of the equation and its meaning: 
+**Equation Overview:** 
+The equation represents the Skyline v1.2 Equation for QuantumAI in Reinforced Machine Learning. It incorporates various components to calculate the updated weight 'wi' for an object, combining both learning and stateful information. The concept of memoization is explicitly included, where previously calculated results are cached and reused to optimize calculations.
+
+**Components Explained:** 
+1. **wi**: The updated weight for object 'i'. 
+2. **wi0**: The initial baseline weight for object 'i'. 
+3. **vector_dij**: The distance between objects 'i' and 'j'. 
+4. **τ**: The parameter controlling the strength of the distance effect. 
+5. **α, β, γ, δ, ε, ζ, η, θ, φ**: Coefficients representing influences of various learning methods on the weight update. 
+
+Parameters controlling the influence of different aspects on the weight update. These factors include: 
+○ α: Controls the impact of positive self-talk (Ps) on the weight update.
+Learning from self talk.
+○ β: Controls the impact of the timeline component (T) on the weight update. 
+○ γ: Controls the impact of mnemonics effectiveness (M) on the weight update.
+Mnemonics learning.
+○ δ: Controls the impact of visual cues involvement (V) on the weight update.
+Visual Cue learning. 
+○ ε: Controls the impact of multi-sensory approach incorporation (MA) on the weight update. 
+Multi-sensory learning.
+○ ζ: Controls the impact of keeping concepts concrete (C) on the weight update. 
+The Concrete Facts we have learned.
+These can be time sensitive or dates ,but this part is meaning to keep the learned information as a real reference.
+○ η: Controls the impact of utilizing similarities more familiar (S) to achieve the goal on the weight update.
+Learning from Similarities 
+○ θ: Controls the impact of example solutions provided (Si) for the current state i on the weight update. 
+Learning from Example solutions.
+
+**Adaptive Learning and Similarities:**
+To enhance the learning process, this version introduces adaptive learning through leveraging similarities:
+- **Similarity Calculation:** Calculate the similarity between the current learning context and previously successful contexts.
+- **Adaptive Factor:** Introduce an adaptive factor to amplify the impact of learning methods that succeeded in similar contexts.
+- **Dynamic Weight Adjustment:** Based on the calculated similarity and adaptive factor, adjust the weights of learning methods to focus on the most relevant ones.
+
+6. **Ps, T, M, V, MA, C, S, Si, Td_i**: Values corresponding to learning method factors. 
+7. **_cache[(...)]:** Cached weight update value based on input parameters. Avoids redundant calculations. 
+8. **complexity_factor:** Scales the impact of factors based on problem complexity. The more complex the bigger the scale ,the least complex the smaller.
+9. **multithreaded_vector_pipeline(...):** Function performing vector operations in parallel using multiple threads. 
+10. **pipeline:** Function performing vector operations sequentially. 
+11. **multithreaded_pipeline(...):** Function performing vector calculations in parallel using multiple threads. 
+12. **object_properties:** Dictionary of properties for object 'i' (position, orientation, distance from center). 
+13. **position_relative_to_center:** Dictionary of reference point coordinates for calculating relative positions. 
+
+**Memoization:** 
+The `_cache` stores calculated weight update values based on specific input parameters. If the same set of input parameters has been used before, the cached value is retrieved, avoiding redundant recalculations. This optimization significantly speeds up computations, especially when dealing with repetitive calculations. 
+
+**Overall Function:** 
+The equation calculates the updated
