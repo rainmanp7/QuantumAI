@@ -1,0 +1,47 @@
+Shores Algorithm
+Can factor large numbers quickly.
+This has the potential to calculate the mathmatical representation or coordinates of vectors.
+
+Especially is AI can use
+Shores Algorithm or Better.
+
+Shor's algorithm is a quantum algorithm developed by mathematician Peter Shor in 1994. It is designed to efficiently factor large numbers into their prime factors using a quantum computer. The algorithm's ability to factor large numbers significantly faster than the best-known classical algorithms has significant implications for the field of cryptography, as many encryption schemes rely on the difficulty of factoring large numbers.
+
+Shor's algorithm consists of the following key steps:
+
+1. Quantum Fourier Transform: Shor's algorithm employs a quantum version of the Fourier Transform to find the periodicity of a function related to the modular exponentiation of a number.
+
+2. Period Finding: By measuring the quantum state after applying the Quantum Fourier Transform, Shor's algorithm can identify the period of the modular exponentiation function. This period corresponds to the least common multiple of the prime factors of the number being factored.
+
+3. Continued Fractions: The continued fraction expansion of the period provides information about the factors of the number. By analyzing the continued fraction expansion, Shor's algorithm can deduce the prime factors of the original number.
+
+It's important to note that Shor's algorithm relies on quantum computing principles and quantum gates to perform these operations in a way that provides a significant speedup compared to classical algorithms. As of now, large-scale, fault-tolerant quantum computers capable of implementing Shor's algorithm for factoring large numbers are not yet available. However, the potential impact of this algorithm on cryptography and number theory has generated significant interest and research in the field of quantum computing.
+
+here's a simplified version of Shor's algorithm:
+
+1. Choose a random integer \(a\) less than the number you want to factor (\(N\)).
+2. Compute \(a^x \mod N\) for increasing values of \(x\) until you find a value that is equal to 1. The smallest \(x\) for which this occurs is \(r\).
+3. If \(r\) is even and \(a^{r/2} \neq -1 \mod N\), then you've found a nontrivial factor of \(N\) as \(\gcd(a^{r/2} - 1, N)\) and \(\gcd(a^{r/2} + 1, N)\) will be nontrivial factors.
+
+This algorithm leverages the quantum Fourier transform to efficiently find the period \(r\) in the modular exponentiation step, which is the key to its speedup compared to classical algorithms. However, implementing Shor's algorithm requires a quantum computer due to its use of quantum gates and measurements.
+
+Shor's algorithm is a complex quantum algorithm, and describing all the details can be quite involved. However, I can provide you with a high-level overview of the algorithm's main steps. Keep in mind that this explanation may not cover all the mathematical and quantum mechanical intricacies.
+
+1. Quantum Fourier Transform:
+   - Prepare two quantum registers: one for the input and one for the output.
+   - Apply a series of quantum gates to perform the Quantum Fourier Transform (QFT) on the input register. QFT is a quantum version of the classical Fourier Transform and is used to find the periodicity of a function.
+
+2. Period Finding:
+   - Apply a modular exponentiation function to the input register. This function computes \(a^x \mod N\), where \(a\) is a random integer less than \(N\), and \(N\) is the number to be factored.
+   - Measure the output register. The measurement result provides information about the period \(r\).
+
+3. Continued Fractions:
+   - Use the measured period \(r\) to construct a continued fraction.
+   - Analyze the continued fraction to find rational approximations of \(r\) that provide the potential factors of \(N\).
+
+4. Factor Extraction:
+   - Extract potential factors from the rational approximations using classical number theory techniques, such as the Greatest Common Divisor (GCD) calculation.
+
+Keep in mind that implementing Shor's algorithm requires a quantum computer capable of performing quantum gates and measurements accurately. The algorithm's efficiency lies in its ability to find the period of a function in polynomial time on a quantum computer, which allows it to factor large numbers much faster than classical algorithms.
+
+Please note that Shor's algorithm involves mathematical concepts such as modular arithmetic, quantum gates, and quantum measurement, which can be quite complex. If you're interested in a more in-depth understanding, I recommend studying resources dedicated to Shor's algorithm in quantum computing literature or textbooks.
