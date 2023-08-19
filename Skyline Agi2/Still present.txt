@@ -1,0 +1,25 @@
+Please check this code and tell me if this is still present in the equation as the cache is also used for weight updates
+Is the streamlined version still caching with Memoization?
+
+
+**Memoization:** The `Cache` stores calculated weight update values based on specific input parameters. If the same set of input parameters has been used before, the cached value is retrieved, avoiding redundant recalculations. This optimization significantly speeds up computations, especially when dealing with repetitive calculations. 
+
+The first Equation:
+
+wi = (wi0 / (1 + (vector_dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ * Si + φ * Td_i + _cache[(wi0, dij, τ, learning_method_coefficients, complexity_factor, object_properties, position_relative_to_center)] + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline | multithreaded_pipeline(vector_calculations, T1, T2, ...)))
+
+or this one
+
+The Second equation:
+
+wi = (wi0 / (1 + (vector_dij / τ))) (1 + α Ps + β T + γ M + δ V + ε MA + ζ C + η S + θ Si + φ Td_i + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline))
+
+Streamlined Equation with Caching:
+
+ wi = (cache_lookup(wi0, vector_dij, τ, α, β, γ, δ, ε, ζ, η, θ, φ, complexity_factor) | cache_miss: cache_update(wi0 / (1 + (vector_dij / τ))) * (1 + α * Ps + β * T + γ * M + δ * V + ε * MA + ζ * C + η * S + θ * Si + φ * Td_i + complexity_factor * (multithreaded_vector_pipeline(vector_data, T1, T2, ...) | pipeline))) 
+
+
+
+
+
+
