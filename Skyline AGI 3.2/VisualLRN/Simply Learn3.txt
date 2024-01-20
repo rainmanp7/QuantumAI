@@ -1,0 +1,34 @@
+# Import necessary libraries
+
+class EnhancedQLearningAgent:
+    def __init__(self, state_space_size, action_space_size, learning_rate=0.1, discount_factor=0.9,
+                 exploration_rate=1.0, min_exploration_rate=0.01, exploration_decay=0.995):
+        # Initialize necessary parameters and components
+
+    def select_action(self, state):
+        # Implement epsilon-greedy strategy with temperature control
+
+    def update_q_table(self, state, action, reward, next_state):
+        # Implement Q-value update with double Q-learning
+
+    def take_action(self, state):
+        # Select action using epsilon-greedy strategy
+
+    def decay_exploration_rate(self):
+        # Implement exploration rate decay
+
+    def update_learning_rate(self):
+        # Implement learning rate annealing
+
+    def anneal_discount_factor(self):
+        # Implement adaptive discount factor annealing
+
+# Example usage with enhancements
+env = Environment()
+agent = EnhancedQLearningAgent(env.state_space_size, env.action_space_size)
+
+num_episodes = 1000
+for episode in range(num_episodes):
+    # Implement the training loop with enhanced Q-learning agent
+
+    print(f"Episode {episode + 1}, Total Reward: {total_reward}")
