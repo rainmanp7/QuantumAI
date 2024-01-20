@@ -1,1 +1,1 @@
-info
+These files are for Skyline AGI Visual Learning.
