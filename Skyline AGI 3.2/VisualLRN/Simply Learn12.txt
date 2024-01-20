@@ -1,0 +1,148 @@
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F
+import numpy as np
+from PIL import Image
+from torch.distributions import Categorical
+
+class PPOCuriosityAgent(nn.Module):
+    def __init__(self, visual_input_channels, text_input_size, action_space_size, curiosity_beta=0.01):
+        super(PPOCuriosityAgent, self).__init__()
+
+        # ... (Previous model components)
+
+        # Curiosity Module
+        self.curiosity_beta = curiosity_beta
+        self.forward_model = nn.Sequential(
+            nn.Linear(768 + 1792, 256),
+            nn.ReLU(),
+            nn.Linear(256, 768 + 1792)
+        )
+        self.inverse_model = nn.Sequential(
+            nn.Linear(768 + 1792, 256),
+            nn.ReLU(),
+            nn.Linear(256, action_space_size)
+        )
+
+        # Optimization
+        self.optimizer_curiosity = optim.Adam(list(self.forward_model.parameters()) + list(self.inverse_model.parameters()), lr=1e-3)
+
+    def intrinsic_reward(self, state, next_state, action):
+        # Compute intrinsic reward using curiosity-based mechanism
+        state = state.view(1, -1)
+        next_state = next_state.view(1, -1)
+        state_action = torch.cat([state, action.float()], dim=1)
+        predicted_next_state = self.forward_model(state_action)
+        intrinsic_reward = F.mse_loss(predicted_next_state, next_state)
+        return intrinsic_reward
+
+    def ppo_update(self, advantages, states, actions, log_probs, intrinsic_rewards, returns):
+        # PPO update with intrinsic rewards
+        # ... (Similar to standard PPO update but includes intrinsic rewards)
+
+    def take_action(self, state):
+        # ... (Similar to previous take_action method but includes curiosity-based exploration)
+        return action
+
+    def curiosity_update(self, state, action, next_state):
+        # Curiosity-driven update
+        state_action = torch.cat([state, action.float()], dim=1)
+        predicted_next_state = self.forward_model(state_action)
+        inverse_model_output = self.inverse_model(state_action)
+        action = action.view(1, -1).float()
+
+        # Intrinsic reward
+        intrinsic_reward = F.mse_loss(predicted_next_state, next_state)
+        intrinsic_reward = intrinsic_reward.detach()
+
+        # Curiosity advantage
+        curiosity_advantage = F.mse_loss(inverse_model_output, action)
+        curiosity_advantage = curiosity_advantage.detach()
+
+        # Update forward and inverse models
+        forward_loss = F.mse_loss(predicted_next_state, next_state)
+        inverse_loss = F.cross_entropy(inverse_model_output, action.argmax().long())
+
+        self.optimizer_curiosity.zero_grad()
+        (forward_loss + inverse_loss).backward()
+        self.optimizer_curiosity.step()
+
+        return intrinsic_reward, curiosity_advantage
+
+# Example usage
+env = EnhancedEnvironment()  # Assuming this environment provides both visual and text observations
+
+# Assuming text input is represented as a vector with size text_input_size
+text_input_size = 300
+
+# Set up the advanced multi-modal PPO-Curiosity agent
+agent = PPOCuriosityAgent(visual_input_channels=3, text_input_size=text_input_size, action_space_size=env.action_space_size)
+
+# PPO parameters
+ppo_epochs = 4
+ppo_clip_ratio = 0.2
+gamma = 0.99
+
+num_episodes = 1000
+for episode in range(num_episodes):
+    visual_state = env.get_visual_state()  # Assuming the environment provides visual observations
+    text_state = env.get_text_state()  # Assuming the environment provides text observations
+
+    total_reward = 0
+    old_states = []
+    old_actions = []
+    old_log_probs = []
+    old_returns = []
+    old_advantages = []
+    old_intrinsic_rewards = []
+
+    for _ in range(50):  # Maximum of 50 steps per episode
+        # Convert visual state to torch tensor
+        visual_state_tensor = torch.from_numpy(visual_state).unsqueeze(0).permute(0, 3, 1, 2).float()
+
+        # Convert text state to torch tensor
+        text_state_tensor = torch.from_numpy(text_state).float()
+
+        # Forward pass through the model
+        q_values = agent(visual_state_tensor, text_state_tensor)
+
+        # Select action based on Q-values
+        action_dist = Categorical(F.softmax(q_values, dim=-1))
+        action = action_dist.sample()
+        log_prob = action_dist.log_prob(action)
+
+        # Take action in the environment
+        next_visual_state, next_text_state, reward = env.step(action.item())
+
+        # Intrinsic reward and curiosity advantage
+        intrinsic_reward, curiosity_advantage = agent.curiosity_update(visual_state_tensor, action, torch.from_numpy(next_visual_state).unsqueeze(0).permute(0, 3, 1, 2).float())
+
+        # Calculate returns and advantages
+        returns = reward + gamma * (1 - env.done) * returns
+        delta = reward + gamma * (1 - env.done) * agent(visual_state_tensor, text_state_tensor).max().item() - q_values.detach().item()
+        advantage = delta + curiosity_advantage.item()
+
+        # Store experience for PPO update
+        old_states.append(torch.cat([visual_state_tensor.view(1, -1), text_state_tensor.view(1, -1)], dim=1))
+        old_actions.append(action)
+        old_log_probs.append(log_prob)
+        old_returns.append(returns)
+        old_advantages.append(advantage)
+        old_intrinsic_rewards.append(intrinsic_reward.item())
+
+        # Update states for the next step
+        visual_state = next_visual_state
+        text_state = next_text_state
+
+        total_reward += reward
+
+    # PPO update
+    old_states = torch.cat(old_states, dim=0)
+    old_actions = torch.cat(old_actions, dim=0)
+    old_log_probs = torch.cat(old_log_probs, dim=0)
+    old_returns = torch.cat(old_returns, dim=0)
+    old_advantages = torch.cat(old_advantages, dim=0)
+    old_intrinsic_rewards = torch.Tensor(old_intrinsic_rewards)
+
+    agent.ppo_update(old_advantages, old_states, old_actions, old_log_probs, old_intrinsic_rewards, old_returns)

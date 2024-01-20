@@ -1,0 +1,63 @@
+import torch
+import torch.nn as nn
+from transformers import GPT2Model, GPT2Tokenizer
+
+class AdvancedNLPQAgent(nn.Module):
+    def __init__(self, visual_input_channels, text_input_size, action_space_size):
+        super(AdvancedNLPQAgent, self).__init__()
+
+        # Pre-trained GPT-2 model and tokenizer
+        self.gpt2_model = GPT2Model.from_pretrained('gpt2')
+        self.tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+
+        # Additional layers for processing visual input
+        self.visual_branch = nn.Sequential(
+            nn.Conv2d(visual_input_channels, 32, kernel_size=8, stride=4),
+            nn.ReLU(),
+            nn.Conv2d(32, 64, kernel_size=4, stride=2),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, kernel_size=3, stride=1),
+            nn.ReLU(),
+            nn.Flatten()
+        )
+
+        # Fully connected layer for merging information
+        self.fc = nn.Sequential(
+            nn.Linear(768 + 1792, 512),  # Adjust the input size based on your specific architecture
+            nn.ReLU(),
+            nn.Linear(512, action_space_size)
+        )
+
+    def forward(self, visual_input, text_input):
+        # Process text input with GPT-2
+        text_embedding = self.gpt2_model(text_input)[0][:, 0, :]  # Use the [CLS] token embedding
+
+        # Process visual input
+        visual_features = self.visual_branch(visual_input)
+
+        # Combine visual and text features
+        combined_features = torch.cat((visual_features, text_embedding), dim=1)
+
+        # Forward pass through the fully connected layer
+        q_values = self.fc(combined_features)
+        return q_values
+
+# Example usage
+env = EnhancedEnvironment()  # Assuming this environment provides both visual and text observations
+
+# Assuming text input is represented as a vector with size text_input_size
+text_input_size = 300
+
+# Set up the advanced multi-modal Q-learning agent
+agent = AdvancedNLPQAgent(visual_input_channels=3, text_input_size=text_input_size, action_space_size=env.action_space_size)
+
+num_episodes = 1000
+for episode in range(num_episodes):
+    visual_state = env.get_visual_state()  # Assuming the environment provides visual observations
+    text_state = env.get_text_state()  # Assuming the environment provides text observations
+
+    total_reward = 0
+
+    for _ in range(50):  # Maximum of 50 steps per episode
+        # Convert visual state to torch tensor
+        visual_state_tensor = torch.from_numpy(visual_state).
