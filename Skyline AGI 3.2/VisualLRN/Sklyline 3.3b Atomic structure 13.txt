@@ -1,0 +1,44 @@
+here's an example of how to use the Skyline AGI 3.3b model with active learning to figure out an atomic structure:
+
+Let's say we have a dataset of atomic structures, each described by a set of features such as atomic number, position, and bond length. We want to use the Skyline AGI 3.3b model to predict the heat range of each atomic structure.
+
+First, we would create a data pool of unlabeled atomic structures. We can use the Skyline AGI 3.3b model to predict the heat range of each atomic structure in the data pool, and then select the structures with the highest uncertainty.
+
+Next, we would use the selected structures to train the model, and then update the data pool by removing the structures that have been labeled. We would repeat this process until the model has converged or a desired level of accuracy has been reached.
+
+Here's an example of how this might look in code:
+```python
+import numpy as np
+import tensorflow as tf
+from skylines import SkylineAGI
+
+# Define the Skyline AGI 3.3b model
+model = SkylineAGI(
+    input_features=['atomic_number', 'position'],
+    output_feature='heat_range',
+    ensemble_size=10,
+    random_state=42
+)
+
+# Create a data pool of unlabeled atomic structures
+x_pool = ... # load the data pool
+
+# Train the model using active learning
+for epoch in range(num_epochs):
+
+    # Select a batch of structures using active learning
+    x_batch, y_batch = uncertainty_sampling(model, x_pool)
+
+    # Train the model on the selected structures
+    model.fit(x_batch, y_batch, epochs=1)
+
+    # Update the data pool
+    x_pool = np.delete(x_pool, selected_indices, axis=0)
+
+# Evaluate the performance of the model
+mae = model.evaluate(x_test, y_test)
+print(f'MAE: {mae}')
+```
+In this example, we're using the `uncertainty_sampling` function to select the structures with the highest uncertainty. We're then training the model on the selected structures, and updating the data pool by removing the structures that have been labeled. We're repeating this process until the model has converged or a desired level of accuracy has been reached.
+
+Note that this is just an example, and you may need to modify the code to fit your specific use case. Additionally, the performance of the model can be improved by tuning the hyperparameters, such as the ensemble size and the random state.
